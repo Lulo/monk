@@ -1,0 +1,18 @@
+{
+  "author": "Andrew Peace",
+  "name": "monk",
+  "description": "convert types",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Lulo/monk.git"
+  },
+  "main": "monk.js",
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "mongojs": "*"
+  },
+  "devDependencies": {}
+}
