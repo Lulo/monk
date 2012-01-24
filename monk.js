@@ -1,8 +1,11 @@
-function ObjectId(val){
-  return mongo.ObjectId(String(val));
+var mongo = require('mongojs');
+
+module.exports.ObjectId = function (val) {
+  return String(val);
+  //return mongo.ObjectId(String(val));
 }
 
-function Bool(val){
+module.exports.Bool = function (val) {
   if (val === 'false'){
     return false;
   } else if (val === '0'){
@@ -13,7 +16,7 @@ function Bool(val){
 }
 
 // attempt to convert the given value into a date object
-function Datetime(val){
+module.exports.Datetime = function (val) {
   if (val instanceof Date) {
     return val;
   }
@@ -21,7 +24,7 @@ function Datetime(val){
 }
 
 // attempt to convert the given value into an integer timestamp
-function Timestamp(val){
+module.exports.Timestamp = function (val) {
   if (val instanceof Date){
     return val.getTime();
   } else if (typeof val == 'string'){
@@ -32,6 +35,6 @@ function Timestamp(val){
 }
 
 // don't do anything to the value! HAHAHA!
-function Any(val){
+module.exports.Any = function (val) {
   return val;
 }
