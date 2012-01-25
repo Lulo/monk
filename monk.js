@@ -1,8 +1,8 @@
 var mongo = require('mongojs');
 
 module.exports.ObjectId = function (val) {
-  return String(val);
-  //return mongo.ObjectId(String(val));
+  //return String(val);
+  return mongo.ObjectId(String(val));
 }
 
 module.exports.Bool = function (val) {
